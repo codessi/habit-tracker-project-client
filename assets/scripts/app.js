@@ -5,7 +5,11 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+const auth = require('./authorization')
 
 $(() => {
-  // your JS code goes here
+ $('#sign-up-form').on('submit', auth.onSignUp)
+ $('#sign-in-form').hide()
+ $('#cover').hide()
 })
+

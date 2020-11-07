@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Habit Tracker</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,7 +11,96 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>Browser Template</h1>
+      <body class="text-center" data-new-gr-c-s-check-loaded="14.983.0">
+
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+          <header class="masthead mb-auto">
+            <div class="inner">
+              <h3 class="masthead-brand">HABIT TRACKER</h3>
+              <nav class="nav nav-masthead justify-content-center">
+                <!-- <a class="nav-link active" href="#">Home</a> -->
+                <!-- <a class="nav-link" href="#">Features</a> -->
+                <!-- <a class="nav-link" href="#">Contact</a> -->
+              </nav>
+            </div>
+          </header>
+    
+          <main role="main" class="inner cover">
+            <h1 class="cover-heading"></h1>
+            <div id='cover' class="frame">
+              <div class="center">
+                <div class="carousel">
+                  <div class="pre">Did you want to be</div>
+                  <div class="change_outer">
+                    <div class="change_inner">
+                      <div class="element">Healther ?</div>
+                      <div class="element">Cleaner ?</div>
+                      <div class="element">Smarter ?</div>
+                      <div class="element">a Good person? </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-secondary">Sign In</a>
+            </p>
+            <section>
+              <form class= "form-signin" id="sign-up-form">
+                <fieldset>
+                  <legend>Sign Up</legend>
+                  
+                    <!-- <label for="sign-up-email">Email</label><br> -->
+                    <input class="form-control " id="sign-up-email" type="text" name ="credentials[email]" placeholder="Email"/>
+                    
+                    <!-- <label for="sign-up-password">Password</label><br> -->
+                    <input class="form-control "id="sign-up-password" type="password" name ="credentials[password]" placeholder="Password"/>
+                   
+                    <!-- <label for="sign-up-password-confirmation">Confirm Password</label><br> -->
+                    <input class="form-control "id="sign-up-password-confirmation" type="password" name ="credentials[password_confirmation]" placeholder="Confirm Password"/>
+                    <br>
+                    <br>
+                    <button class="btn btn-lg btn-primary btn-block"type="submit" value="Submit">Sign Up</button>
+                </fieldset>
+              </form>
+            </section> 
+            <section>
+              <form id="sign-in-form">
+              <fieldset>
+                <h1 class="h3 mb-3 font-weight-normal ">Please Sign in</h1>
+      
+                <label for = "sign-in-email"></label>
+                <input class="form-control "id="sign-in-email" type = "text" name = "credentials[email]" placeholder="Email"/>
+                <input class="form-control " id="sign-in-password" type = "password" name ="credentials[password]" placeholder="Password"/> 
+                <br>
+                <button class="btn btn-lg btn-primary btn-block" type = "submit" value = "Submit">Sign in</button>
+                
+                <a href="" id = "sign-up-link">Sign Up</a> <br>
+                <a href="" id ="change-password-link">Change Password</a>
+              </section>
+              </fieldset>
+            </form>
+           
+          </main>
+    
+          <footer class="mastfoot mt-auto">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </footer>
+        </div>
+    
+    
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script> -->
+      
+    
+    <div id="viewPortSize" class="bottom_right" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 12px; display: none;">Inner: 673 x 678<br>Outer: 1120 x 757</div></body>
     </body>
 </html>
