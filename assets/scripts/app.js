@@ -15,7 +15,7 @@ $(() => {
   $('#sign-up-form').on('submit', auth.onSignUp)
   $('#sign-up-form').hide()
   $('#sign-in-form').on('submit', auth.onSignIn)
-  //  $('#sign-in-form').hide()
+  // $('#sign-in-form').hide()
   $('#cover').hide()
   $('#change-password-form').hide()
   $('#change-password-form').on('submit', auth.onPasswordChange)
@@ -32,7 +32,6 @@ let activity = 'run'
 let achievement = false
 let data
 
-
 // console.log(data)
 function onCreatActivity (e) {
   e.preventDefault()
@@ -40,7 +39,7 @@ function onCreatActivity (e) {
   // console.log(document.getElementById('habit-name').value)
   activity = $('#habit-name').val()
   console.log(activity)
-  
+
   // console.log('onCreatActivity is firing')
   achievement = e.target.value
   console.log(achievement)
