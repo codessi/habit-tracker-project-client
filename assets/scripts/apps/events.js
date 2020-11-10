@@ -1,7 +1,9 @@
 'use strict'
 // require
-const config = require('./config')
-const store = require('./store')
+// const config = require('./config')
+// const store = require('./store')
+const api = require('./api')
+const ui = require('./ui')
 
 // initial declaration
 let activity = 'run'
@@ -25,15 +27,19 @@ function onCreatActivity (e) {
       name: activity
     }
   }
-  activityCreate(data)
+  api.activityCreate(data)
     .then(ui.activityCreateSuccess)
     // .then (() => {indexActivity()})
     // .then(ui.indexActivitySuccess)
 }
 
-function onIndexActivity (e){
+function onIndexActivity (e) {
   e.preventDefault()
-  indexActivity()
+  api.indexActivity()
     .then(ui.indexActivitySuccess)
+}
 
+module.exports = {
+  onCreatActivity,
+  onIndexActivity
 }

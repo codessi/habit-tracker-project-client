@@ -1,7 +1,7 @@
 'use strict'
 
-const config = require('./config')
-const store = require('./store')
+const config = require('./../config')
+const store = require('./../store')
 
 const indexActivity = function (data) {
   return $.ajax({
@@ -23,4 +23,9 @@ const activityCreate = function (data) {
     method: 'POST',
     data: data
   })
+}
+
+module.exports = {
+  activityCreate,
+  indexActivity
 }

@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('./store')
+const store = require('./../store')
 
 const activityCreateSuccess = function (response) {
   store.habit = response.habit
@@ -23,7 +23,6 @@ const activityCreateSuccess = function (response) {
   // `)
 }
 
-
 const indexActivitySuccess = function (response) {
   console.log(response)
   // let lastLog = response.habits[response.habits.length-1]
@@ -44,7 +43,7 @@ const indexActivitySuccess = function (response) {
         return 'No'
       }
     }
-    document.getElementById('index').innerHTML +=' Activity: ' + item.name + ' Achieved: ' + answer() + ' on ' + date.toDateString() + '<br>'
+    document.getElementById('index').innerHTML += ' Activity: ' + item.name + ' Achieved: ' + answer() + ' on ' + date.toDateString() + '<br>'
 
   // $('#activity').html(`${lastLog.name}`)
   }
