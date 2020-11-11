@@ -22,8 +22,9 @@ const onSignIn = function (event) {
   event.preventDefault()
   console.log('onSignIn is firing')
   const form = event.target
+  
   const data = getFormFields(form)
-
+ console.log(data)
   api.signIn(data)
     .then(ui.signInSuccess)
 

@@ -25,7 +25,30 @@ const activityCreate = function (data) {
   })
 }
 
+const deleteOne = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/habits/' + data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'DELETE'
+  })
+}
+
+const update = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/habits/' + $('#update-id').val(),
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'PATCH',
+    data: data
+  })
+}
+
 module.exports = {
   activityCreate,
-  indexActivity
+  indexActivity,
+  deleteOne,
+  update
 }

@@ -4,6 +4,7 @@
 // const store = require('./store')
 const api = require('./api')
 const ui = require('./ui')
+const getFormFields = require('./../../../lib/get-form-fields')
 
 // initial declaration
 let activity = 'run'
@@ -32,6 +33,20 @@ function onCreatActivity (e) {
     // .then (() => {indexActivity()})
     // .then(ui.indexActivitySuccess)
 }
+function onDeleteOne (e) {
+  e.preventDefault()
+  // console.log('onDeleteOne is firing')
+  // let data = e.target.value
+  // console.log(e.target)
+  // const form = e.target
+  // const data = getFormFields(form)
+  let data = $('#id').val()
+  console.log($('#id').val())
+  // console.log(data)
+  api.deleteOne(data)
+    .then(ui.deleteOneSuccess)
+    .then(ui.deleteOneFail)
+}
 
 function onIndexActivity (e) {
   e.preventDefault()
@@ -39,7 +54,20 @@ function onIndexActivity (e) {
     .then(ui.indexActivitySuccess)
 }
 
+function onUpdate (e) {
+  e.preventDefault()
+  console.log('onUpdate is fireing')
+  const form = e.target
+  const data = getFormFields(form)
+  console.log(data)
+  api.update(data)
+    .then(ui.updateSuccess)
+    .then(ui.updateFail)
+}
+
 module.exports = {
   onCreatActivity,
-  onIndexActivity
+  onIndexActivity,
+  onDeleteOne,
+  onUpdate
 }

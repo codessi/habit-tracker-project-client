@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('./../store')
+let store = require('./../store')
 
 const activityCreateSuccess = function (response) {
   store.habit = response.habit
@@ -25,6 +25,8 @@ const activityCreateSuccess = function (response) {
 
 const indexActivitySuccess = function (response) {
   console.log(response)
+  store = response
+  console.log(store)
   // let lastLog = response.habits[response.habits.length-1]
   const index = response.habits
   // $('#log-display').html(`${JSON.stringify(lastLog)}`)
@@ -48,6 +50,8 @@ const indexActivitySuccess = function (response) {
   // $('#activity').html(`${lastLog.name}`)
   }
 }
+
+
 
 module.exports = {
   activityCreateSuccess,

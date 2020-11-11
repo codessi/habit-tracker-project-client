@@ -17,11 +17,6 @@
           <header class="masthead mb-auto">
             <div class="inner">
               <h3 class="masthead-brand">HABIT TRACKER</h3>
-              <nav class="nav nav-masthead justify-content-center">
-                <!-- <a class="nav-link active" href="#">Home</a> -->
-                <!-- <a class="nav-link" href="#">Features</a> -->
-                <!-- <a class="nav-link" href="#">Contact</a> -->
-              </nav>
             </div>
           </header>
     
@@ -53,7 +48,21 @@
                 <input id="habit-name" /><p>today? </p>
                 <button id=yes type="submit" value="true">Yes</button>
                 <button id=no type=submit value=false>no</button>
-
+              </form>
+            </section>
+            <section>
+              <form id=delete-form>
+                <input id=id>
+                <button id=delet-btn type="submit">delete</button>
+              </form>
+            </section>
+            <section>
+              <legend>Update Form</legend>
+              <input id=update-id type=text name=habit[id] placeholder="ID number">
+              <form id=update-form>
+                <input id=update-activity type=text name=habit[name] placeholder="Activity Name">
+                <input id=update-achievement type=text name=habit[achieve] placeholder="true or false">
+                <button type="submit" value=Submit>Update</button>
               </form>
             </section>
             <!-- display area -->
