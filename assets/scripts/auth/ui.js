@@ -7,6 +7,7 @@ const signUpSuccess = function (response) {
   store.user = response.user
   $('#sign-up-form').hide()
   $('#sign-in-form').show()
+  $('.center').hide()
   $('#sign-out-form').show()
   $('#message').delay(1000).fadeOut('slow')
   $('#sign-out-form').hide()
@@ -23,6 +24,7 @@ const signInSuccess = function (response) {
   $('#habit-input').show()
   // console.log('signin success finrgi')
   $('#change-password-link').show()
+  $('.center').hide()
   $('#sign-in-form').hide()
   $('#sign-up-form').hide()
   $('#message').delay(1000).fadeOut('slow')

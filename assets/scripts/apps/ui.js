@@ -5,6 +5,7 @@ let store = require('./../store')
 const activityCreateSuccess = function (response) {
   store.habit = response.habit
   const date = new Date(response.habit.createdAt)
+  // $('#display-date').html(`Date: ${date.toDateString()}`)
   const answer = () => {
     if (response.habit.achieve === true) {
       return 'yes'
