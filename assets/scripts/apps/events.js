@@ -30,12 +30,13 @@ function onCreatActivity (e) {
   }
   api.activityCreate(data)
     .then(ui.activityCreateSuccess)
+    .catch(ui.activityCreateFail)
     // .then (() => {indexActivity()})
     // .then(ui.indexActivitySuccess)
 }
 function onDeleteOne (e) {
   e.preventDefault()
-  // console.log('onDeleteOne is firing')
+  console.log('onDeleteOne is firing')
   // let data = e.target.value
   // console.log(e.target)
   // const form = e.target
@@ -45,13 +46,15 @@ function onDeleteOne (e) {
   // console.log(data)
   api.deleteOne(data)
     .then(ui.deleteOneSuccess)
-    .then(ui.deleteOneFail)
+    .catch(ui.deleteOneFail)
 }
 
 function onIndexActivity (e) {
   e.preventDefault()
+  $('#sign-out-form').show()
   api.indexActivity()
     .then(ui.indexActivitySuccess)
+    .catch(ui.indexActivityFail)
 }
 
 function onUpdate (e) {
@@ -61,8 +64,8 @@ function onUpdate (e) {
   const data = getFormFields(form)
   console.log(data)
   api.update(data)
-    .then(ui.updateSuccess)
-    .then(ui.updateFail)
+    .then(ui.activityUpdateSuccess)
+    .catch(ui.activityUpdateFail)
 }
 
 module.exports = {

@@ -22,12 +22,16 @@ const activityCreateSuccess = function (response) {
   // <span> Activity: ${response.habit.name}</span>
   // `)
 }
+const activityCreateFail = function (response) {
+  $('#message').html('Sorry, Create Activity Unsuccessful')
+  // $('#message').delay(1000).fadeOut('slow')
+}
 
-// arrange array newest on top 
+// arrange array newest on top
 const indexActivitySuccess = function (response) {
   store = response
   console.log(store)
-  document.getElementById('index').innerHTML =""
+  document.getElementById('index').innerHTML = ''
   $('#habit-input').hide()
   $('#delete-update').show()
   $('#sign-out-form').show()
@@ -52,37 +56,35 @@ const indexActivitySuccess = function (response) {
   date.toDateString() + '<br>' + ' ID ' + item._id + '<br>'
   }
 }
-// const indexActivitySuccess = function (response) {
-//   console.log(response)
-//   store = response
-//   console.log(store)
-//   // let lastLog = response.habits[response.habits.length-1]
-//   const index = response.habits
-//   // $('#log-display').html(`${JSON.stringify(lastLog)}`)
-//   // response.habits.forEach(item => $('#index').html(item.name))
-//   const allIndex = index.map(myFunction)
-//   console.log(index)
-//   allIndex.reverse()
-//   function myFunction (item) {
-//     // document.getElementById("index").innerHTML += item.name + "<br>"
-//     // $('#index').HTML += item.name + "<br>"
-//     const date = new Date(item.createdAt)
-//     const answer = () => {
-//       if (item.achieve === true) {
-//         return 'yes'
-//       } else {
-//         return 'No'
-//       }
-//     }
-//     document.getElementById('index').innerHTML += ' Activity: ' + item.name + ' Achieved: ' + answer() + ' on ' + date.toDateString() + '<br>'
 
-//   // $('#activity').html(`${lastLog.name}`)
-//   }
-// }
+const indexActivityFail = function (response) {
+  $('#message2').html('Display Failed')
+}
 
+const activityUpdateSuccess = function (response) {
+  store.game = response.game
+  
+}
+const activityUpdateFail = function (response) {
+  $('#message2').html('Display Failed')
+}
 
+const deleteOneSuccess = function (response) {
+  $('#message2').html('Delete successfully.')
+}
+const deleteOneFail = function (response) {
+  console.log('deleteOneFail is firing ')
+  $('#message2').html('Delete is not successful.')
+}
 
 module.exports = {
   activityCreateSuccess,
-  indexActivitySuccess
+  activityCreateFail,
+  indexActivitySuccess,
+  indexActivityFail,
+  activityUpdateSuccess,
+  activityUpdateFail,
+  deleteOneSuccess,
+  deleteOneFail
+
 }
