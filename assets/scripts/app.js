@@ -26,9 +26,13 @@ $(() => {
   $('#sign-out-form').hide()
   // $('#yes').on('click', trackLog)
   $('#habit-input').on('click', appsEvents.onCreatActivity)
+  $('#habit-input').hide()
   $('#hi-five').on('click', appsEvents.onIndexActivity)
+  $('#hi-five').hide()
   $('#delete-form').on('submit', appsEvents.onDeleteOne)
   $('#update-form').on('submit', appsEvents.onUpdate)
+  // $('#update-btn').on('click', appsEvents.onUpdate)
+  $('#delete-update').hide()
 })
 
 

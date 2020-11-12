@@ -43,28 +43,32 @@
             </p>
             <section>
               <form id="habit-input">
-                <legend>Habit Name</legend>
+                <!-- <legend>Habit Name</legend> -->
                 <p >did you </p>
                 <input id="habit-name" /><p>today? </p>
                 <button id=yes type="submit" value="true">Yes</button>
                 <button id=no type=submit value=false>no</button>
               </form>
             </section>
-            <section>
-              <form id=delete-form>
-                <input id=id>
-                <button id=delet-btn type="submit">delete</button>
-              </form>
-            </section>
-            <section>
-              <legend>Update Form</legend>
-              <input id=update-id type=text name=habit[id] placeholder="ID number">
-              <form id=update-form>
-                <input id=update-activity type=text name=habit[name] placeholder="Activity Name">
-                <input id=update-achievement type=text name=habit[achieve] placeholder="true or false">
-                <button type="submit" value=Submit>Update</button>
-              </form>
-            </section>
+            <div id=delete-update>
+              <section>
+                <form id=delete-form>
+                <legend>Delete Form</legend>
+                  <input id=id>
+                  <button id=delet-btn type="submit">delete</button>
+                </form>
+              </section>
+              <section>
+                <form id=update-form>
+                <legend>Update Form</legend>
+                
+                  <input id=update-id type=text name=habit[id] placeholder="ID number">
+                  <input id=update-activity type=text name=habit[name] placeholder="Activity Name">
+                  <input id=update-achievement type=text name=habit[achieve] placeholder="true or false">
+                  <button id=update-btn type="submit" value=Submit>Update</button>
+                </form>
+              </section>
+            </div>
             <!-- display area -->
             <section id=display-area>
               <h3>
@@ -75,11 +79,12 @@
               <!-- <p value="You logged">You logged</p> -->
               <p id=activity></p>
               <p id=display-answer></p>
-              <figure>
-                <a id=hi-five>
+              <figure id=hi-five >
+                <a >
                 <img src="public/hifive.png" alt="" width="100" >
+                
+                <figcaption>Hi Five! <br> (click here for stats)</figcaption>
                 </a>
-                <figcaption>Hi Five!</figcaption>
               </figure>  
             </section>
             <section>
@@ -147,7 +152,7 @@
     
           <footer class="mastfoot mt-auto">
             <div class="inner">
-              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    
             </div>
           </footer>
         </div>

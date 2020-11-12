@@ -3,7 +3,7 @@
 let apiUrl
 const apiUrls = {
   // console.log('apiUrl is firing ')
-  // production: 'https://shrouded-plateau-44826.herokuapp.com',
+  production: 'https://shrouded-plateau-44826.herokuapp.com',
   development: 'http://localhost:4741'
 }
 // const apiUrls = {
