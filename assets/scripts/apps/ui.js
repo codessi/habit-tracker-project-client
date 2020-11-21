@@ -13,34 +13,40 @@ const activityCreateSuccess = function (response) {
       return 'No'
     }
   }
-  console.log('activityCreatesuccess ' + response)
   $('#display-activity').html(`Activity: ${response.habit.name}`)
   $('#display-achievement').html(`Achieved: ${answer()}`)
+  $('#display-area').show()
   $('#hi-five').show()
+  $('#habit-name').val('')
   $('#display-date').html(`Date: ${date.toDateString()}`)
-  console.log(response.habit.createdAt)
+  $('#message2').html('Create Activity Successful')
+  
   // let createHtml = (`
   // <span> Activity: ${response.habit.name}</span>
   // `)
 }
 const activityCreateFail = function (response) {
-  $('#message').html('Sorry, Create Activity Unsuccessful')
+  $('#message2').html('Sorry, Create Activity Unsuccessful')
   // $('#message').delay(1000).fadeOut('slow')
 }
 
 // arrange array newest on top
 const indexActivitySuccess = function (response) {
   store = response
-  console.log(store)
   document.getElementById('index').innerHTML = ''
-  $('#habit-input').hide()
+  // $('#habit-input').hide()
   $('#delete-update').show()
   $('#sign-out-form').show()
+  $('#habit-name').val('')
+  $('#message2').show()
+  $('#sign-out-form').show()
+  $('#activity-inqury').show()
+  $('#delete-form').show()
+  $('#display-area').show()
+  $('#update-form').show()
+  $('#index').show()
 
   const index = response.habits
-  console.log(index[0])
-
-  console.log(index.reverse()[0])
   index.map(myFunction)
   // $('#index').html(toHTML)
   function myFunction (item) {
@@ -63,18 +69,18 @@ const indexActivityFail = function (response) {
 }
 
 const activityUpdateSuccess = function (response) {
-  store.game = response.game
-  
+  // store.game = response.game
+  $('#message2').html('Activity Update Successful')
 }
 const activityUpdateFail = function (response) {
-  $('#message2').html('Display Failed')
+  // $('#message2').html('Display Failed')
+  $('#message2').html('Sorry, Activity Update Unsuccessful')
 }
 
 const deleteOneSuccess = function (response) {
   $('#message2').html('Delete successfully.')
 }
 const deleteOneFail = function (response) {
-  console.log('deleteOneFail is firing ')
   $('#message2').html('Delete is not successful.')
 }
 

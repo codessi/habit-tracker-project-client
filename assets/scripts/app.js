@@ -16,6 +16,12 @@ $(() => {
     e.preventDefault()
     $('#sign-up-form').show()
   })
+  $('#change-password-link').hide()
+  $('#change-password-link').on('click', (e) => {
+    e.preventDefault()
+    $('#change-password-form').show()
+  })
+  
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   // $('#sign-in-form').hide()
   $('#cover').hide()
@@ -25,8 +31,8 @@ $(() => {
   $('#sign-out-form').on('submit', authEvents.onSignOut)
   $('#sign-out-form').hide()
   // $('#yes').on('click', trackLog)
-  $('#habit-input').on('submit', appsEvents.onCreatActivity)
-  $('#habit-input').hide()
+  $('#habit-input').on('click', appsEvents.onCreatActivity)
+  $('#activity-inqury').hide()
   $('#hi-five').on('click', appsEvents.onIndexActivity)
   $('#hi-five').hide()
   $('#delete-form').on('submit', appsEvents.onDeleteOne)

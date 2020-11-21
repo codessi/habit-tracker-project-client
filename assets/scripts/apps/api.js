@@ -14,7 +14,6 @@ const indexActivity = function (data) {
 }
 
 const activityCreate = function (data) {
-// console.log(store.user.token)
   return $.ajax({
     url: config.apiUrl + '/habits',
     headers: {

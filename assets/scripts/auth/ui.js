@@ -3,7 +3,7 @@
 const store = require('./../store')
 
 const signUpSuccess = function (response) {
-  $('#message').html('Sign Up of ' + response.user.email + ' is successful! ')
+  $('#message2').html('Sign Up of ' + response.user.email + ' is successful! ')
   store.user = response.user
   $('#sign-up-form').hide()
   $('#sign-in-form').show()
@@ -14,7 +14,7 @@ const signUpSuccess = function (response) {
   $('#sign-up-form')[0].reset()
 }
 const signUpFail = function () {
-  $('#message').html('Sign Up failed,  try again')
+  $('#message2').html('Sign Up failed,  try again')
   $('#sign-up-form')[0].reset()
   $('#message').delay(1000).fadeOut('slow')
   // $('#sign-up-form')[0].reset()
@@ -24,10 +24,10 @@ const signUpFail = function () {
 const signInSuccess = function (response) {
   $('#message').html('Sign In of ' + response.user.email + ' is successful! ')
   store.user = response.user
-  $('#habit-input').show()
-  // console.log('signin success finrgi')
+  $('#activity-inqury').show()
   $('#change-password-link').show()
   $('.center').hide()
+  $('#change-password-link').show()
   $('#sign-in-form').hide()
   $('#sign-up-form').hide()
   $('#message').delay(1000).fadeOut('slow')
@@ -46,8 +46,10 @@ const changePasswordSuccess = function (response) {
   $('#message').delay(5000).fadeOut('slow')
   $('#sign-in-form').hide()
   $('#change-password-form').hide()
-  $('#sign-out-form').show()
+
+  // $('#sign-out-form').show()
   $('#change-password-form')[0].reset()
+  $('#change-password-link').hide()
 }
 
 const changePasswordFail = function (response) {
@@ -62,10 +64,13 @@ const signOutSuccess = function () {
   $('#message').show()
   $('#sign-in-form').show()
   // $('#board').hide()
+  $('#message2').hide()
   $('#sign-out-form').hide()
-  // $('#index-display').hide()
-  // $('#game-create').hide()
-  // $('#game-index').hide()
+  $('#activity-inqury').hide()
+  $('#delete-form').hide()
+  $('#display-area').hide()
+  $('#update-form').hide()
+  $('#index').hide()
   $('#sign-in-form')[0].reset()
 }
 
