@@ -35,6 +35,7 @@ $(() => {
   $('#activity-inqury').hide()
   $('#hi-five').on('click', appsEvents.onIndexActivity)
   $('#hi-five').hide()
+  $('#change-password-form').hide()
   $('#delete-form').on('submit', appsEvents.onDeleteOne)
   $('#update-form').on('submit', appsEvents.onUpdate)
   // $('#update-btn').on('click', appsEvents.onUpdate)

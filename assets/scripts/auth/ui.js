@@ -72,6 +72,7 @@ const signOutSuccess = function () {
   $('#update-form').hide()
   $('#index').hide()
   $('#sign-in-form')[0].reset()
+  $('#change-password-form').hide()
 }
 
 const signOutFail = function (response) {

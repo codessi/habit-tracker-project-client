@@ -69,19 +69,21 @@ const indexActivityFail = function (response) {
 }
 
 const activityUpdateSuccess = function (response) {
-  // store.game = response.game
+  $('#update-form')[0].reset()
   $('#message2').html('Activity Update Successful')
 }
 const activityUpdateFail = function (response) {
-  // $('#message2').html('Display Failed')
+  $('#update-form')[0].reset()
   $('#message2').html('Sorry, Activity Update Unsuccessful')
 }
 
 const deleteOneSuccess = function (response) {
   $('#message2').html('Delete successfully.')
+  $('#delete-form')[0].reset()
 }
 const deleteOneFail = function (response) {
   $('#message2').html('Delete is not successful.')
+  $('#delete-form')[0].reset()
 }
 
 module.exports = {
