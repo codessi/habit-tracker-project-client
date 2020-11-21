@@ -17,7 +17,6 @@ function onCreatActivity (e) {
 
   // console.log(document.getElementById('habit-name').value)
   activity = $('#habit-name').val()
-  console.log(activity)
 
   // console.log('onCreatActivity is firing')
   achievement = e.target.value

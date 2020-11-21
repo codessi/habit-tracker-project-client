@@ -11,11 +11,14 @@ const signUpSuccess = function (response) {
   $('#sign-out-form').show()
   $('#message').delay(1000).fadeOut('slow')
   $('#sign-out-form').hide()
+  $('#sign-up-form')[0].reset()
 }
 const signUpFail = function () {
   $('#message').html('Sign Up failed,  try again')
   $('#sign-up-form')[0].reset()
   $('#message').delay(1000).fadeOut('slow')
+  // $('#sign-up-form')[0].reset()
+  
 }
 
 const signInSuccess = function (response) {
@@ -28,6 +31,7 @@ const signInSuccess = function (response) {
   $('#sign-in-form').hide()
   $('#sign-up-form').hide()
   $('#message').delay(1000).fadeOut('slow')
+  $('#sign-in-form')[0].reset()
 }
 const signInFail = function (response) {
   $('#message').show()
@@ -43,13 +47,13 @@ const changePasswordSuccess = function (response) {
   $('#sign-in-form').hide()
   $('#change-password-form').hide()
   $('#sign-out-form').show()
+  $('#change-password-form')[0].reset()
 }
 
 const changePasswordFail = function (response) {
   $('#message').show()
   $('#message').html('Password Change failed,  try again')
-  $('#change-password-old')[0].reset()
-  $('#change-password-new')[0].reset()
+  $('#change-password-form')[0].reset()
   $('#sign-out-form').show()
 }
 
