@@ -25,7 +25,7 @@ $(() => {
   $('#sign-out-form').on('submit', authEvents.onSignOut)
   $('#sign-out-form').hide()
   // $('#yes').on('click', trackLog)
-  $('#habit-input').on('click', appsEvents.onCreatActivity)
+  $('#habit-input').on('submit', appsEvents.onCreatActivity)
   $('#habit-input').hide()
   $('#hi-five').on('click', appsEvents.onIndexActivity)
   $('#hi-five').hide()
