@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Habit Tracker</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+      <body class="text-center" data-new-gr-c-s-check-loaded="14.983.0">
+
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+          <header class="masthead mb-auto">
+            <div class="inner">
+              <h3 class="masthead-brand">HABIT TRACKER</h3>
+            </div>
+          </header>
+    
+          <main role="main" class="inner cover">
+            <!-- <h1 class="cover-heading"></h1> -->
+            <!-- <div id='cover' class="frame"> -->
+              <div class="center">
+                <div class="carousel">
+                  <div class="pre">Do you want to be</div>
+                  <div class="change_outer">
+                    <div class="change_inner">
+                      <div class="element">Healther ?</div>
+                      <div class="element">Cleaner ?</div>
+                      <div class="element">Smarter ?</div>
+                      <div class="element">a Good person? </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            <!-- </div> -->
+            <p class="lead">
+              <!-- <a href="#" class="btn btn-lg btn-secondary">Sign In</a> -->
+            </p>
+            <h4 id=message></h4>
+            <h4 id=message2></h4>
+            <section id=activity-inqury>
+              <h2 >Did you </h2>
+                <input id="habit-name" placeholder="activity name" /><h2>today? </h2>
+              <form id="habit-input">
+                <!-- <legend>Habit Name</legend> -->
+                
+                <button id=yes type="submit" value="true">Yes</button>
+                <button id=no type=submit value=false>no</button>
+              </form>
+            </section>
+            <div id=delete-update>
+              <section>
+                <form id=delete-form>
+                <legend>Delete Form</legend>
+                  <input id=id placeholder="ID">
+                  <button id=delet-btn type="submit">delete</button>
+                </form>
+              </section>
+              <section>
+                <form id=update-form>
+                <legend>Update Form</legend>
+                
+                  <input id=update-id type=text name=habit[id] placeholder="ID number">
+                  <input id=update-activity type=text name=habit[name] placeholder="Activity Name">
+                  <input id=update-achievement type=text name=habit[achieve] placeholder="true or false">
+                  <button id=update-btn type="submit" value=Submit>Update</button>
+                </form>
+              </section>
+            </div>
+            <!-- display area -->
+            <section id=display-area>
+              <h3>
+                <p id=display-activity></p>
+                <p id=display-achievement></p>
+                <p id=display-date></p>
+              </h3>
+              <!-- <p value="You logged">You logged</p> -->
+              <p id=activity></p>
+              <p id=display-answer></p>
+              <figure id=hi-five >
+                <a >
+                <img src="public/hifive.png" alt="" width="100" >
+                
+                <figcaption>Hi Five! <br> (click here for stats)</figcaption>
+                </a>
+              </figure>  
+            </section>
+            <section>
+                <p id=index ></p>
+            </section>
+            <section>
+              <form class= "form-signin" id="sign-up-form">
+                <fieldset>
+                  <legend>Sign Up</legend>
+                  
+                    <!-- <label for="sign-up-email">Email</label><br> -->
+                    <input class="form-control " id="sign-up-email" type="text" name ="credentials[email]" placeholder="Email"/>
+                    
+                    <!-- <label for="sign-up-password">Password</label><br> -->
+                    <input class="form-control "id="sign-up-password" type="password" name ="credentials[password]" placeholder="Password"/>
+                   
+                    <!-- <label for="sign-up-password-confirmation">Confirm Password</label><br> -->
+                    <input class="form-control "id="sign-up-password-confirmation" type="password" name ="credentials[password_confirmation]" placeholder="Confirm Password"/>
+                    <br>
+                    <br>
+                    <button class="btn btn-lg btn-primary btn-block"type="submit" value="Submit">Sign Up</button>
+                </fieldset>
+              </form>
+            </section> 
+            <section>
+              <form id="sign-in-form">
+                <fieldset>
+                  <!-- <h1 class="h3 mb-3 font-weight-normal ">Please Sign in</h1> -->
+        
+                  <label for = "sign-in-email"></label>
+                  <input class="form-control "id="sign-in-email" type = "text" name = "credentials[email]" placeholder="Email"/>
+                  <input class="form-control " id="sign-in-password" type = "password" name ="credentials[password]" placeholder="Password"/> 
+                  <br>
+                  <button class="btn btn-lg btn-primary btn-block" type = "submit" value = "Submit">Sign in</button>
+                  
+                  <a href="" id = "sign-up-link">Sign Up</a> <br>
+                  <!-- <a href="" id ="change-password-link">Change Password</a> -->
+                </fieldset>
+              </form>
+            </section>
+            <a href="" id ="change-password-link">Change Password</a>
+            <section>
+              <form id='change-password-form'>
+                <fieldset>
+                  <legend>Change Password</legend>
+      
+                  <label for = "change-password-old">Old Password</label>
+                  <input id="change-password-old" type="password" name="passwords[old]" placeholder="Old Password"/>
+                  <br>
+                  <label for="change-password-new">New Password</label>
+                  <input id = "change-password-new" type="password" name="passwords[new]" placeholder="New Password">
+                  <br>
+      
+                  <input type ="submit" value="Submit"> 
+                </fieldset>
+              </form>
+            </section>
+            <section>
+              <form id ="sign-out-form">
+                  <button class="btn btn-lg btn-primary btn-block" type="submit" value = "Submit"> Sign Out</button>
+              </form>
+            </section>
+           
+          </main>
+    
+          <footer class="mastfoot mt-auto">
+            <div class="inner">
+    
+            </div>
+          </footer>
+        </div>
+    
+    <div id="viewPortSize" class="bottom_right" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 12px; display: none;">Inner: 673 x 678<br>Outer: 1120 x 757</div></body>
+    </body>
+</html>
